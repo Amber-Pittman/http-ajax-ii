@@ -34,8 +34,8 @@ function Signup(props) {
         <form onSubmit={handleSubmit}>
             {error && <div className="error">{error}</div>}
             <input type="name" name="name" placeholder="Name" value={data.name} onChange={handleChange} />
-            <input type="email" name="email" placeholder="Email" value={data.email} onChange={handleChange} />
-            <input type="password" name="password" placeholder="Password" value={data.password} onChange={handleChange} />
+            <input type="email" autoComplete="email" name="email" placeholder="Email" value={data.email} onChange={handleChange} />
+            <input type="password" autoComplete="current-password" name="password" placeholder="Password" value={data.password} onChange={handleChange} />
             
             <button type="submit">Sign Up</button>
         </form>
