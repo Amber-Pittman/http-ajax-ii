@@ -8,6 +8,7 @@ import Signin from "./Signin"
 import Account from "./Account"
 import Logout from "./Logout"
 import Users from "./Users"
+import UserUpdate from "./UserUpdate"
 
 function App() {
 	const signedIn = getToken()
@@ -28,6 +29,7 @@ function App() {
 			<Route exact path="/signin" component={Signin} />
 			{/* These routes will require an auth token to be set, due to our handy HOC */}
 			<ProtectedRoute exact path="/users" component={Users} />
+			<ProtectedRoute exact path="/users/:id" component={UserUpdate} />
 			<ProtectedRoute exact path="/account" component={Account} />
 			<ProtectedRoute exact path="/logout" component={Logout} />
 		</div>
