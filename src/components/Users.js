@@ -23,6 +23,7 @@ function Users(props) {
             {users.map(user => (
                 <div key={user.id} className="account">
                     <Link className="account-update" to={`/users/${user.id}`}>Edit</Link>
+                    <button className="account-delete" onClick={}>Delete</button>
                     <div className="account-row">Name: {user.name}</div>
                     <div className="account-row">Email: {user.email}</div>
                 </div>
